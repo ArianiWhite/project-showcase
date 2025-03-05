@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Icons</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        /* Style all Font Awesome icons */
+        .fa {
+            padding: 60px;
+            font-size: 80px;
+            width: 90px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Add a hover effect */
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Set specific colors for each brand */
+        /* Facebook */
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Twitter */
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Instagram */
+        .fa-instagram {
+            background: #E1306C;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+         /* SnapChat */
+         .fa-snapchat {
+            background: #ebe836;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* LinkedIn */
+        .fa-linkedin {
+            background: #0077B5;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Pinterest */
+        .fa-pinterest {
+            background: #E60023;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+        
+        /* Youtube */
+        .fa-youtube {
+            background: red;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+         /* Whatsapp */
+         .fa-whatsapp {
+            background: green;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+        
+        /* Tumblr */
+        .fa-tumblr {
+            background: #35465C;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Soundcloud */
+        .fa-soundcloud {
+            background: orange;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Reddit */
+        .fa-reddit {
+            background: rgb(255, 111, 0);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Spotify */
+        .fa-spotify {
+            background: black;
+            color: #1ED760;
+            text-shadow: 2px 2px 4px rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
+        }
+
+        /* Twitch */
+        .fa-twitch {
+            background: #6441A4;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Deviantart */
+        .fa-deviantart {
+            background: black;
+            color: #05CC47;
+            text-shadow: 2px 2px 4px  rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
+        }
+
+        /* Behance */
+        .fa-behance {
+            background: #1769FF;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Github */
+        .fa-github {
+            background: black;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
+        }
+
+        /* Meetup */
+        .fa-meetup {
+            background: #e0393e;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Skype */
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Slack */
+        .fa-slack {
+            background: #4A154B;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Dribbble */
+        .fa-dribbble {
+            background:  #ea4c89;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+
+        /* Vine */
+        .fa-vine {
+            background:  #00a478;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <!-- Social media icons -->
+    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <a href="https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat"></i></a></li>
+    <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+    <a href="https://www.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+    <a href="https://soundcloud.com/" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
+    <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+    <a href="https://www.reddit.com/" target="_blank"><i class="fa fa-reddit"></i></a></li>
+    <a href="https://open.spotify.com/" target="_blank"><i class="fa fa-spotify"></i></a></li>
+    <a href="https://www.twitch.tv/" target="_blank"><i class="fa fa-twitch"></i></a></li>
+    <a href="https://www.deviantart.com/" target="_blank"><i class="fa fa-deviantart"></i></a></li>
+    <a href="https://www.behance.net/search/projects" target="_blank"><i class="fa fa-behance"></i></a></li>
+    <a href="https://github.com/explore" target="_blank"><i class="fa fa-github"></i></a></li>
+    <a href="https://www.meetup.com/" target="_blank"><i class="fa fa-meetup"></i></a></li>
+    <a href="https://www.skype.com/en/" target="_blank"><i class="fa fa-skype"></i></a></li>
+    <a href="https://slack.com/workspace-signin" target="_blank"><i class="fa fa-slack"></i></a></li>
+    <a href="https://dribbble.com/tags/website" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+    <a href="https://vine.co//" target="_blank"><i class="fa fa-vine"></i></a></li>
+
+</body>
+</html>
