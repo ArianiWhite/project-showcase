@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide show</title>
+    <link rel="stylesheet" href="FrogSlideshow.css">
+    </head>
+<body>
+    <div class="container">
+    <span class="nav-arrow" onclick="prevSlide()">&lt;</span>
+
+    <div class="slide-content">
+        <!-- Only ONE image here -->
+        <img src="" alt="Frog" class="frog-image" id="frog-image">
+
+        <!-- Text overlay at bottom -->
+        <div class="text-overlay">
+            <h1 class="name" id="frog-name"></h1>
+            <div class="price" id="frog-price"></div>
+            <p class="description" id="frog-description"></p>
+        </div>
+    </div>
+
+    <span class="nav-arrow" onclick="nextSlide()">&gt;</span>
+</div>
+
+    <script>
+        const frogData = [
+            {
+                src: "Frog1.jpeg",
+                name: "Tree Frog",
+                description: "Vibrant green amphibian known for its vocalizations and ability to climb.",
+            },
+            {
+                src: "Frogimage2.jpg.jpg",
+                name: "Poison Dart Frog",
+                description: "Brightly colored and highly toxic, a symbol of rainforest biodiversity.",
+            },
+            {
+                src: "Frogimage3.jpg.jpg",
+                name: "Glass Frog",
+                description: "Unique frog with translucent skin, allowing you to see its internal organs.",
+            },
+            {
+                src: "Frogimage4.jpg.jpg",
+                name: "Tomato Frog",
+                description: "Named for its striking red color, it inflates itself when threatened.",
+            }
+        ];
+
+        let currentIndex = 0;
+        const frogImage = document.getElementById("frog-image");
+        const frogName = document.getElementById("frog-name");
+        const frogPrice = document.getElementById("frog-price");
+        const frogDescription = document.getElementById("frog-description");
+
+        function updateSlide() {
+            frogImage.style.opacity = 0; // Fade out
+            setTimeout(() => {
+                const data = frogData[currentIndex];
+                frogImage.src = data.src;
+                frogName.textContent = data.name;
+                frogPrice.textContent = data.price;
+                frogDescription.textContent = data.description;
+                frogImage.style.opacity = 1; // Fade in
+            }, 500); // Wait for the fade out transition
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % frogData.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + frogData.length) % frogData.length;
+            updateSlide();
+        }
+
+        // Initial load
+        window.onload = updateSlide;
+    </script>
+</body>
+</html>
