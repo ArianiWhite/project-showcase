@@ -6,195 +6,373 @@
     <link rel="icon" href="social-media.png">
     <title>Social Media Icons</title>
     <!-- Include Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
 
-        /* Style all Font Awesome icons */
-        .fa {
-            padding: 60px;
-            font-size: 80px;
-            width: 90px;
-            text-align: center;
-            text-decoration: none;
-        }
+.facebook .card-header, .facebook .card-btn { background: linear-gradient(135deg, #0866FF, #1877F2, #3B82F6); }
+.x .card-header, .x .card-btn { background: linear-gradient(135deg, #000000, #2b2b2b);}
+.instagram .card-header, .instagram .card-btn { background: linear-gradient(135deg,#e1306c,#fd1d1d); }
+.snapchat .card-header, .snapchat .card-btn { background: linear-gradient(135deg,#fffc00,#f7d800); color:#000; }
+.linkedin .card-header, .linkedin .card-btn { background: linear-gradient(135deg,#0077b5,#00a0dc); }
+.pinterest .card-header, .pinterest .card-btn { background: linear-gradient(135deg,#e60023,#c8232c); }
+.youtube .card-header, .youtube .card-btn { background: linear-gradient(135deg,#ff0000,#cc0000); }
+.tumblr .card-header, .tumblr .card-btn { background: linear-gradient(135deg,#35465c,#2c3e50); }
+.soundcloud .card-header, .soundcloud .card-btn { background: linear-gradient(135deg,#ff8800,#ff5500); }
+.whatsapp .card-header, .whatsapp .card-btn { background: linear-gradient(135deg,#25d366,#128c7e); }
+.reddit .card-header, .reddit .card-btn { background: linear-gradient(135deg,#ff4500,#ff8717); }
+.spotify .card-header, .spotify .card-btn { background: linear-gradient(135deg,#1db954,#191414); }
+.twitch .card-header, .twitch .card-btn { background: linear-gradient(135deg,#6441a5,#9146ff); }
+.deviantart .card-header, .deviantart .card-btn { background: linear-gradient(135deg,#05cc47,#1e7f43); }
+.behance .card-header, .behance .card-btn { background: linear-gradient(135deg,#1769ff,#0057ff); }
+.github .card-header, .github .card-btn { background: linear-gradient(135deg,#333,#000); }
+.meetup .card-header, .meetup .card-btn { background: linear-gradient(135deg,#ed1c40,#e0393e); }
+.teams .card-header, .teams .card-btn { background: linear-gradient(135deg, #464EB8, #505AC9, #7B83EB); }
+.slack .card-header, .slack .card-btn { background: linear-gradient(135deg,#4a154b,#611f69); }
+.dribbble .card-header, .dribbble .card-btn { background: linear-gradient(135deg,#ea4c89,#c32361); }
+.vine .card-header, .vine .card-btn { background: linear-gradient(135deg,#00a478,#007f5f); }
 
-        /* Add a hover effect */
-        .fa:hover {
-            opacity: 0.7;
-        }
 
-        /* Set specific colors for each brand */
-        /* Facebook */
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+/* Hover Effect (lift and glow)*/
+.social-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+}
 
-        /* Twitter */
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.tooltip {
+    position: absolute;
+    bottom: -36px;
+    background: #111;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
 
-        /* Instagram */
-        .fa-instagram {
-            background: #E1306C;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card:hover .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-         /* SnapChat */
-         .fa-snapchat {
-            background: #ebe836;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
 
-        /* LinkedIn */
-        .fa-linkedin {
-            background: #0077B5;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+body {
+    margin: 0;
+    background: linear-gradient(to right, #d7dde8, #f5f7fa);
+    font-family: system-ui, sans-serif;
+}
 
-        /* Pinterest */
-        .fa-pinterest {
-            background: #E60023;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
-        
-        /* Youtube */
-        .fa-youtube {
-            background: red;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
 
-         /* Whatsapp */
-         .fa-whatsapp {
-            background: green;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
-        
-        /* Tumblr */
-        .fa-tumblr {
-            background: #35465C;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px 25px;
+    min-height: 280px;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Soundcloud */
-        .fa-soundcloud {
-            background: orange;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.25);
+}
 
-        /* Reddit */
-        .fa-reddit {
-            background: rgb(255, 111, 0);
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.card-header {
+    height: 120px;
+    border-radius: 22px 22px 80px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -30px -25px 25px;
+}
 
-        /* Spotify */
-        .fa-spotify {
-            background: black;
-            color: #1ED760;
-            text-shadow: 2px 2px 4px rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
-        }
+.card-header i {
+    font-size: 48px;
+    color: white;
+}
 
-        /* Twitch */
-        .fa-twitch {
-            background: #6441A4;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card h3 {
+    margin: 10px 0;
+}
 
-        /* Deviantart */
-        .fa-deviantart {
-            background: black;
-            color: #05CC47;
-            text-shadow: 2px 2px 4px  rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
-        }
+.social-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
 
-        /* Behance */
-        .fa-behance {
-            background: #1769FF;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+/* Get rid of the blue link lines and font color*/
+.social-card {
+  color: inherit;
+}
 
-        /* Github */
-        .fa-github {
-            background: black;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(127, 127, 126, 0.585); /* Add a subtle shadow */
-        }
+.social-card h3,
+.social-card p,
+.card-btn {
+  text-decoration: none;
+  color: inherit;
+}
 
-        /* Meetup */
-        .fa-meetup {
-            background: #e0393e;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+body {
+  font-family: 'Noto Serif', serif;
+}
 
-        /* Skype */
-        .fa-skype {
-            background: #00aff0;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
 
-        /* Slack */
-        .fa-slack {
-            background: #4A154B;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.social-card p {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+}
 
-        /* Dribbble */
-        .fa-dribbble {
-            background:  #ea4c89;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        }
+.card-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
-        /* Vine */
-        .fa-vine {
-            background:  #00a478;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+.card-btn {
+  color: white !important;
+}
+
+/* MOBILE FRIENDLY LAYOUT */
+@media (max-width: 768px) {
+
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .social-card {
+    padding: 24px 20px;
+    min-height: 240px;
+  }
+
+  .card-header {
+    height: 90px;
+    margin: -20px -20px 20px;
+    border-radius: 18px 18px 60px 18px;
+  }
+
+  .card-header i {
+    font-size: 36px;
+  }
+
+  .social-card h3 {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+
+  .social-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .card-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  .social-card {
+    padding: 20px 16px;
+    min-height: 220px;
+  }
+
+  .card-header {
+    height: 80px;
+  }
+
+  .card-header i {
+    font-size: 30px;
+  }
+
+  .social-card h3 {
+    font-size: 16px;
+  }
+
+  .social-card p {
+    font-size: 12px;
+  }
+
+  .card-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}
         }
     </style>
 </head>
 <body>
     <!-- Social media icons -->
-    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-    <a href="https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat"></i></a></li>
-    <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-    <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
-    <a href="https://www.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
-    <a href="https://soundcloud.com/" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
-    <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-    <a href="https://www.reddit.com/" target="_blank"><i class="fa fa-reddit"></i></a></li>
-    <a href="https://open.spotify.com/" target="_blank"><i class="fa fa-spotify"></i></a></li>
-    <a href="https://www.twitch.tv/" target="_blank"><i class="fa fa-twitch"></i></a></li>
-    <a href="https://www.deviantart.com/" target="_blank"><i class="fa fa-deviantart"></i></a></li>
-    <a href="https://www.behance.net/search/projects" target="_blank"><i class="fa fa-behance"></i></a></li>
-    <a href="https://github.com/explore" target="_blank"><i class="fa fa-github"></i></a></li>
-    <a href="https://www.meetup.com/" target="_blank"><i class="fa fa-meetup"></i></a></li>
-    <a href="https://www.skype.com/en/" target="_blank"><i class="fa fa-skype"></i></a></li>
-    <a href="https://slack.com/workspace-signin" target="_blank"><i class="fa fa-slack"></i></a></li>
-    <a href="https://dribbble.com/tags/website" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-    <a href="https://vine.co//" target="_blank"><i class="fa fa-vine"></i></a></li>
+    <div class="social-grid">
 
+<div class="social-card facebook">
+  <div class="card-header"><i class="fab fa-facebook"></i></div>
+  <h3>Facebook</h3>
+  <p>Connect with friends, share updates, and join communities.</p>
+  <a href="https://www.facebook.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card x">
+  <div class="card-header"><i class="fab fa-x-twitter"></i></div>
+  <h3>X</h3>
+  <p>Follow trends, news, and real-time conversations.</p>
+  <a href="https://x.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card instagram">
+  <div class="card-header"><i class="fab fa-instagram"></i></div>
+  <h3>Instagram</h3>
+  <p>Share photos, stories, and reels with your audience.</p>
+  <a href="https://www.instagram.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card snapchat">
+  <div class="card-header"><i class="fab fa-snapchat"></i></div>
+  <h3>Snapchat</h3>
+  <p>Send disappearing photos and messages.</p>
+  <a href="https://www.snapchat.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card linkedin">
+  <div class="card-header"><i class="fab fa-linkedin"></i></div>
+  <h3>LinkedIn</h3>
+  <p>Build your professional network and career.</p>
+  <a href="https://www.linkedin.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card pinterest">
+  <div class="card-header"><i class="fab fa-pinterest"></i></div>
+  <h3>Pinterest</h3>
+  <p>Discover and save creative ideas.</p>
+  <a href="https://www.pinterest.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card youtube">
+  <div class="card-header"><i class="fab fa-youtube"></i></div>
+  <h3>YouTube</h3>
+  <p>Watch, upload, and share video content worldwide.</p>
+  <a href="https://www.youtube.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card tumblr">
+  <div class="card-header"><i class="fab fa-tumblr"></i></div>
+  <h3>Tumblr</h3>
+  <p>Microblogging for creatives and fandoms.</p>
+  <a href="https://www.tumblr.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card soundcloud">
+  <div class="card-header"><i class="fab fa-soundcloud"></i></div>
+  <h3>SoundCloud</h3>
+  <p>Stream and share music worldwide.</p>
+  <a href="https://soundcloud.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card whatsapp">
+  <div class="card-header"><i class="fab fa-whatsapp"></i></div>
+  <h3>WhatsApp</h3>
+  <p>Private messaging and calls.</p>
+  <a href="https://www.whatsapp.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card reddit">
+  <div class="card-header"><i class="fab fa-reddit"></i></div>
+  <h3>Reddit</h3>
+  <p>Community-driven discussions and content.</p>
+  <a href="https://www.reddit.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card spotify">
+  <div class="card-header"><i class="fab fa-spotify"></i></div>
+  <h3>Spotify</h3>
+  <p>Stream music and podcasts.</p>
+  <a href="https://open.spotify.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card twitch">
+  <div class="card-header"><i class="fab fa-twitch"></i></div>
+  <h3>Twitch</h3>
+  <p>Live streaming for gamers and creators.</p>
+  <a href="https://www.twitch.tv/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card deviantart">
+  <div class="card-header"><i class="fab fa-deviantart"></i></div>
+  <h3>DeviantArt</h3>
+  <p>Art community for digital creators.</p>
+  <a href="https://www.deviantart.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card behance">
+  <div class="card-header"><i class="fab fa-behance"></i></div>
+  <h3>Behance</h3>
+  <p>Showcase creative portfolios.</p>
+  <a href="https://www.behance.net/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card github">
+  <div class="card-header"><i class="fab fa-github"></i></div>
+  <h3>GitHub</h3>
+  <p>Host and collaborate on code.</p>
+  <a href="https://github.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card meetup">
+  <div class="card-header"><i class="fab fa-meetup"></i></div>
+  <h3>Meetup</h3>
+  <p>Find local groups and events.</p>
+  <a href="https://www.meetup.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card teams">
+  <div class="card-header"><i class="fab fa-microsoft"></i></div>
+  <h3>Teams</h3>
+  <p>Chat, meet, and collaborate with your team.</p>
+  <a href="https://www.microsoft.com/en-us/microsoft-teams/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card slack">
+  <div class="card-header"><i class="fab fa-slack"></i></div>
+  <h3>Slack</h3>
+  <p>Team communication and collaboration.</p>
+  <a href="https://slack.com/" target="_blank" class="card-btn">Visit</a>
+</div>
+
+<div class="social-card dribbble">
+  <div class="card-header"><i class="fab fa-dribbble"></i></div>
+  <h3>Dribbble</h3>
+  <p>Design inspiration and showcases.</p>
+  <a href="https://dribbble.com/" target="_blank" class="card-btn">Visit</a>
+</div>
 </body>
 </html>
+
